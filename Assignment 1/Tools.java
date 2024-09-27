@@ -4,8 +4,8 @@
 /**
  * 
  * <p>
- * This is a tools class. Its purpose is to provide 
- * functions that can be used to alter the values of
+ * This is a tools class. 
+ *
  * </p>
  * 
  * @author Ajani Small, Alyssa Blades, Shane Foster
@@ -30,8 +30,8 @@ public class Tools
      */
     public int round(int value)
     {
-        int placeValue = value % 10; 
-        int pivot = 5;
+        int placeValue = value % 10;        
+        int pivot = 5;                      
 
         if (value >= 10 && placeValue == 0){
             pivot = 50;
@@ -105,8 +105,9 @@ public class Tools
         
         for(int  i = 0; i < values.length; i++){
             if (
-                (match == 0) || 
+                (match == 0)                   || 
                 (match == -1 && values[i] < 0) ||
+                (match == 1 && values[i] > 0)  ||
                 (match > 0 && values[i] % match == 0)
             ){
                 values[i] = 0;
