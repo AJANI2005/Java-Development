@@ -30,14 +30,16 @@ public class Tools
      */
     public int round(int value)
     {
-        int placeValue = value % 10;        
-        int pivot = 5;                      
+        int placeValue = value % 10;   //Value in ones place
+        int pivot = 5;                          
 
+        //Change pivot if value is greater than 10 and unit value is zero
         if (value >= 10 && placeValue == 0){
             pivot = 50;
             placeValue = (value - placeValue);
         }
-       
+        
+        //Round
         if (placeValue >= pivot){
             return value + 1;
         }else{
